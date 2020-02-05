@@ -1,0 +1,47 @@
+@import '../../../stylesheets/variables.scss';
+
+.logo {
+  h1 {
+    text-transform: uppercase;
+    margin: 0px;
+    color: $blue;
+    font-weight: 900;
+    font-size: 60px;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 8px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: calc(100% - 11px);
+      height: 5px;
+      bottom: 0px;
+      background: $blue;
+      transform: translateX(-50%);
+    }
+
+    svg {
+      font-size: 60px;
+    }
+  }
+
+  &.small {
+
+    h1,
+    svg {
+      font-size: 20px;
+    }
+
+    h1 {
+      padding-bottom: 5px;
+
+      &:after {
+        height: 3px;
+      }
+    }
+  }
+}

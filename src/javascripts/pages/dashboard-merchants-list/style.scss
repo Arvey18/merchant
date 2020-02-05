@@ -1,0 +1,88 @@
+@import '../../../stylesheets/variables.scss';
+
+#merchant-list {
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+
+  .header-id {
+    width: 300px;
+  }
+
+  .merchant-list-table {
+    flex: 1;
+
+    .sort {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &.active {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .root-table {
+      max-height: 100%;
+      min-height: 90%;
+      display: flex;
+      flex-flow: column;
+
+      .wrapper-table {
+        flex: 1;
+      }
+
+      .MuiTableBody-root {
+        tr {
+          &:last-child {
+            td {
+              border: none;
+            }
+          }
+
+          &:hover {
+            background-color: $gray;
+          }
+
+          &:nth-child(even) {
+            td {
+              // background-color: $gray;
+            }
+          }
+        }
+
+        .action-button-edit-button {
+          svg {
+            color: $green;
+          }
+        }
+
+        .action-button-delete-button {
+          svg {
+            color: $red;
+          }
+        }
+      }
+
+      .MuiTablePagination-root {
+        border-top: 1px solid rgba(224, 224, 224, 1);
+
+        .MuiIconButton-root {
+          &:hover {
+            background-color: $gray;
+          }
+        }
+      }
+
+      .MuiTableHead-root {
+        th {
+          color: $white;
+          background: $blue;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

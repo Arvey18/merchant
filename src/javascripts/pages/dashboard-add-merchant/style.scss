@@ -1,0 +1,148 @@
+@import '../../../stylesheets/variables.scss';
+
+#merchant-add {
+  .edit-form {
+    display: flex;
+    flex-flow: row;
+    margin-top: 60px;
+
+    .nav-left {
+      width: 350px;
+
+      &>div {
+        font-size: 20px;
+        padding: 10px 20px;
+
+        cursor: pointer;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        background-color: $white;
+        transition: ease 0.3s background-color, ease 0.3s color;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+
+        &.active {
+          background-color: $blue;
+          color: $white;
+          font-weight: 500;
+        }
+
+        &:hover {
+          background-color: $blue;
+          color: $white;
+        }
+      }
+    }
+
+    .content-right {
+      flex: 1;
+      padding: 0px 60px;
+
+      &>.content-right-con {
+        display: none;
+
+        h3 {
+          font-weight: 900;
+          margin: 0px;
+          font-size: 32px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        p {
+          margin: 0px;
+          font-style: italic;
+          color: $red;
+        }
+
+        .fields-con {
+          margin-top: 20px;
+          border: 1px solid $gray;
+          border-radius: 5px;
+          padding: 20px 40px;
+
+          // .text-field {
+          //   max-width: 50%;
+          // }
+
+          .MuiTextField-root {
+            .MuiFormLabel-root {
+              font-size: 16px;
+            }
+
+            input {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .locations-shipping {
+          border-bottom: 1px solid $gray;
+          padding: 30px 0px;
+
+          h4 {
+            font-size: 14px;
+            margin: 0px 0px 50px;
+          }
+
+          .location-fields-con {
+            display: flex;
+            flex-flow: row;
+            margin-bottom: 30px;
+
+            &:last-child {
+              margin-bottom: 0px;
+            }
+
+            &>div {
+              flex: 1;
+            }
+
+            .MuiFormLabel-root {
+              font-size: 12px;
+              padding-left: 12px;
+              margin-bottom: 1px;
+              display: inline-block;
+              font-weight: 900;
+              color: $blue;
+            }
+          }
+
+          &:first-child {
+            padding-top: 0px;
+          }
+
+          &:last-child {
+            padding-bottom: 0px;
+            border-bottom: none;
+          }
+
+        }
+
+        &.active {
+          display: block;
+        }
+      }
+
+      .action-buttons {
+        margin-top: 20px;
+        text-align: right;
+
+        button {
+          margin-right: 10px;
+
+          &:last-child {
+            margin-right: 0px;
+          }
+
+          &.MuiButton-containedSecondary {
+            color: $white;
+            background-color: $red;
+          }
+        }
+      }
+    }
+  }
+}

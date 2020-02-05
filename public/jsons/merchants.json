@@ -1,0 +1,243 @@
+[{
+    "id": 1,
+    "name": "Merchant 1",
+    "metro_manila": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "intra_provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    }
+  },
+  {
+    "id": 2,
+    "name": "Merchant 2",
+    "metro_manila": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "intra_provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    }
+  },
+  {
+    "id": 3,
+    "name": "Merchant 3",
+    "metro_manila": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "intra_provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    }
+  },
+  {
+    "id": 4,
+    "name": "Merchant 4",
+    "metro_manila": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "intra_provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    }
+  },
+  {
+    "id": 5,
+    "name": "Merchant 5",
+    "metro_manila": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "intra_provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    }
+  },
+  {
+    "id": 6,
+    "name": "Merchant 6",
+    "metro_manila": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "intra_provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    }
+  },
+  {
+    "id": 7,
+    "name": "Merchant 7",
+    "metro_manila": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "intra_provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    }
+  },
+  {
+    "id": 8,
+    "name": "Merchant 8",
+    "metro_manila": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "intra_provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    }
+  },
+  {
+    "id": 9,
+    "name": "Merchant 9",
+    "metro_manila": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "intra_provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    }
+  },
+  {
+    "id": 10,
+    "name": "Merchant 10",
+    "metro_manila": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "intra_provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    }
+  },
+  {
+    "id": 11,
+    "name": "Merchant 11",
+    "metro_manila": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    },
+    "intra_provincial": {
+      "box": true,
+      "oversized": false,
+      "big_pouch": true,
+      "small_pouch": true
+    }
+  }
+]

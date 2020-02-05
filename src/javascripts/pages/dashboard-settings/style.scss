@@ -1,0 +1,83 @@
+@import '../../../stylesheets/variables.scss';
+
+#settings {
+  .edit-form {
+    display: flex;
+    flex-flow: row;
+    margin-top: 60px;
+
+    .nav-left {
+      width: 350px;
+
+      &>div {
+        font-size: 20px;
+        padding: 10px 20px;
+
+        cursor: pointer;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        background-color: $white;
+        transition: ease 0.3s background-color, ease 0.3s color;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+
+        &.active {
+          background-color: $blue;
+          color: $white;
+          font-weight: 500;
+        }
+
+        &:hover {
+          background-color: $blue;
+          color: $white;
+        }
+      }
+    }
+
+    .content-right {
+      flex: 1;
+      padding: 0px 60px;
+
+      &>.content-right-con {
+        display: none;
+
+        h3 {
+          font-weight: 900;
+          margin: 0px;
+          font-size: 32px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        p {
+          margin: 0px;
+          font-style: italic;
+          color: $red;
+        }
+
+        &.active {
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+        }
+      }
+
+      .data-con {
+        text-align: center;
+        margin-top: 40px;
+
+        img {
+          border-radius: 100%;
+          max-width: 200px;
+        }
+
+        .user-name {
+          font-size: 20px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

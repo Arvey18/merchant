@@ -1,0 +1,17 @@
+@import '../../../stylesheets/variables.scss';
+
+#dashboard {
+  .MuiDrawer-paper {
+    background: $gray;
+  }
+
+  .MuiListItem-button:hover {
+    text-decoration: none;
+    background-color: $blue;
+    color: $white;
+
+    svg {
+      color: $white;
+    }
+  }
+}
