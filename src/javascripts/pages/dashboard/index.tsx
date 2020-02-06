@@ -114,9 +114,13 @@ const Dashboard = (props: any): ReactElement => {
       <CssBaseline />
       <AppBar
         position="fixed"
-        className={clsx(classes.appBar, {
-          [classes.appBarShift]: open,
-        })}
+        className={clsx(
+          classes.appBar,
+          {
+            [classes.appBarShift]: open,
+          },
+          'app-bar-con'
+        )}
       >
         <Toolbar>
           <IconButton
@@ -124,7 +128,7 @@ const Dashboard = (props: any): ReactElement => {
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            className={classes.menuButton}
+            className={clsx(classes.menuButton, 'menu-button')}
           >
             <MenuIcon fontSize="large" />
           </IconButton>
@@ -205,6 +209,7 @@ const Dashboard = (props: any): ReactElement => {
           {
             [classes.drawerOpen]: open,
             [classes.drawerClose]: !open,
+            'open-drawer': open,
           },
           'drawer-con'
         )}
@@ -265,15 +270,15 @@ const Dashboard = (props: any): ReactElement => {
         </List>
         <div className="mobile-footer-nav">
           {location === '/dashboard' ? (
-            <div className={clsx(classes.search)}>
+            <div className={clsx(classes.search, 'search-input-con')}>
               <div className={classes.searchIcon}>
                 <SearchIcon />
               </div>
               <InputBase
                 placeholder="Search Merchant…"
                 classes={{
-                  root: classes.inputRoot,
-                  input: classes.inputInput,
+                  root: clsx(classes.inputRoot, 'root-input'),
+                  input: clsx(classes.inputInput, 'root-input-input'),
                 }}
                 value={search_text}
                 inputProps={{'aria-label': 'search merchant'}}

@@ -36,7 +36,7 @@
 
 @media screen and (max-width: 767px) {
   #dashboard {
-    .makeStyles-menuButton-30 {
+    .menu-button {
       margin-right: 10px;
       margin-left: -15px;
       padding: 15px;
@@ -52,7 +52,7 @@
       padding-right: 15px;
     }
 
-    .makeStyles-appBarShift-24 {
+    .app-bar-con {
       margin-left: 0px;
       width: 100%;
     }
@@ -78,7 +78,7 @@
         }
       }
 
-      &.makeStyles-drawerOpen-41 {
+      &.open-drawer {
         width: 280px;
         left: 0px;
 
@@ -153,8 +153,8 @@
         background-color: $blue;
       }
 
-      .makeStyles-search-49,
-      .makeStyles-inputRoot-52 {
+      .search-input-con,
+      .root-input {
         max-width: 100%;
         width: 100%;
       }
