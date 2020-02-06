@@ -186,7 +186,10 @@ const MerchantsList = (props: any): ReactElement => {
                               return (
                                 <TableCell
                                   className={clsx(
-                                    column.id === 'id' ? 'header-id' : ''
+                                    column.id === 'id' ? 'header-id' : '',
+                                    column.id === 'name'
+                                      ? 'header-merchant-name'
+                                      : ''
                                   )}
                                   key={column.id}
                                 >

@@ -45,11 +45,15 @@ a {
     color: $blue;
   }
 
+  &>div {
+    display: flex;
+    align-items: center;
+  }
+
   .action-button {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
   }
 }
 
@@ -59,4 +63,23 @@ a {
 
 .MuiSnackbar-anchorOriginTopCenter {
   top: 84px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .MuiSnackbar-anchorOriginTopCenter {
+    top: 70px !important;
+  }
+
+  .content-header {
+    h1 {
+      font-size: 30px;
+    }
+
+    .action-button {
+      .MuiFab-root {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
 }

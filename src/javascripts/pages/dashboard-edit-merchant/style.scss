@@ -63,10 +63,6 @@
           border-radius: 5px;
           padding: 20px 40px;
 
-          // .text-field {
-          //   max-width: 50%;
-          // }
-
           .MuiTextField-root {
             .MuiFormLabel-root {
               font-size: 16px;
@@ -140,6 +136,75 @@
           &.MuiButton-containedSecondary {
             color: $white;
             background-color: $red;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #merchant-edit {
+    .edit-form {
+      .nav-left {
+        width: 250px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #merchant-edit {
+    .edit-form {
+      flex-flow: column;
+      margin-top: 30px;
+
+      .nav-left {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-flow: row;
+        position: relative;
+        overflow: hidden;
+        align-items: stretch;
+
+        &>div {
+          position: relative;
+          top: 10px;
+          flex: 1;
+          margin: 0px 0px 0px 10px;
+          padding-bottom: 20px;
+          border: 1px solid $blue;
+
+          &:first-child {
+            margin-left: 0px;
+          }
+        }
+
+        .fields-con {
+
+          .MuiTextField-root {
+            .MuiFormLabel-root {
+              font-size: 14px;
+            }
+
+            input {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .content-right {
+        padding: 60px 0px 0px 0px;
+
+        &>.content-right-con {
+          .fields-con {
+            padding: 20px;
+          }
+
+          h3 {
+            font-size: 30px;
           }
         }
       }

@@ -86,3 +86,28 @@
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  #merchant-list {
+    .header-id {
+      width: 150px;
+    }
+
+    .header-merchant-name {
+      width: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #merchant-list {
+    .header-id {
+      width: 100px;
+    }
+
+    .header-merchant-name {
+      width: 250px;
+      word-break: break-word;
+    }
+  }
+}

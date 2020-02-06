@@ -25,6 +25,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
 import InputBase from '@material-ui/core/InputBase';
+import Button from '@material-ui/core/Button';
 import {useStyles} from './style';
 
 // MUI ICONS
@@ -34,6 +35,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import SettingsIcon from '@material-ui/icons/Settings';
 import SearchIcon from '@material-ui/icons/Search';
 import MenuIcon from '@material-ui/icons/Menu';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 // images
 import AvatarImage from '../../../assets/images/avatar.png';
@@ -126,7 +128,11 @@ const Dashboard = (props: any): ReactElement => {
           >
             <MenuIcon fontSize="large" />
           </IconButton>
-          <Typography variant="h5" noWrap className={classes.clicker}>
+          <Typography
+            variant="h5"
+            noWrap
+            className={clsx(classes.clicker, 'nav-titles')}
+          >
             {match.params.id !== undefined ? (
               <div className={classes.root}>
                 <div
@@ -135,13 +141,17 @@ const Dashboard = (props: any): ReactElement => {
                 >
                   Dashboard /{' '}
                 </div>
-                <div className={classes.currentRoute}>{match.params.name}</div>
+                <div className={clsx(classes.currentRoute, 'current-route')}>
+                  <div>{match.params.name}</div>
+                </div>
               </div>
             ) : (
-              'Dashboard'
+              <div onClick={() => handleChangeRoute('/dashboard')}>
+                Dashboard
+              </div>
             )}
           </Typography>
-          <div className={classes.flexGrow}>
+          <div className={clsx(classes.flexGrow, 'search-navigation-con')}>
             {location === '/dashboard' ? (
               <div className={clsx(classes.search)}>
                 <div className={classes.searchIcon}>
@@ -160,7 +170,7 @@ const Dashboard = (props: any): ReactElement => {
               </div>
             ) : null}
           </div>
-          <Grid className={classes.avatarCon}>
+          <Grid className={clsx(classes.avatarCon, 'right-options-con')}>
             <div
               onClick={() => handleChangeRoute('/dashboard-settings')}
               className={classes.avatarClicker}
@@ -190,20 +200,44 @@ const Dashboard = (props: any): ReactElement => {
       </AppBar>
       <Drawer
         variant="permanent"
-        className={clsx(classes.drawer, {
-          [classes.drawerOpen]: open,
-          [classes.drawerClose]: !open,
-        })}
-        classes={{
-          paper: clsx({
+        className={clsx(
+          classes.drawer,
+          {
             [classes.drawerOpen]: open,
             [classes.drawerClose]: !open,
-          }),
+          },
+          'drawer-con'
+        )}
+        classes={{
+          paper: clsx(
+            {
+              [classes.drawerOpen]: open,
+              [classes.drawerClose]: !open,
+            },
+            'drawer-paper'
+          ),
         }}
         open={open}
       >
         <div className={classes.toolbar}>
           <Logo addClass="small" />
+        </div>
+        <div className="mobile-avatar">
+          <Avatar
+            alt="profile-pic"
+            src={AvatarImage}
+            className="mobile-avatar-image"
+          />
+          <Typography noWrap className="mobile-name">
+            {user.name}
+          </Typography>
+          <div className="action-links">
+            <div onClick={() => handleChangeRoute('/dashboard-settings')}>
+              Profile
+            </div>
+            <div className="separator"></div>
+            <div onClick={handleLogout}>Sign Out</div>
+          </div>
         </div>
         <List className={classes.menuConList}>
           {menus.map((val, index) => (
@@ -229,8 +263,35 @@ const Dashboard = (props: any): ReactElement => {
             </ListItem>
           ))}
         </List>
+        <div className="mobile-footer-nav">
+          {location === '/dashboard' ? (
+            <div className={clsx(classes.search)}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Search Merchant…"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+                value={search_text}
+                inputProps={{'aria-label': 'search merchant'}}
+                onChange={e => search(e.target.value as string)}
+              />
+            </div>
+          ) : null}
+          <Button
+            onClick={handleDrawerOpen}
+            className="close-nav-btn"
+            variant="contained"
+            color="primary"
+          >
+            <ArrowBackIcon />
+          </Button>
+        </div>
       </Drawer>
-      <main className={classes.content}>
+      <main className={clsx(classes.content, 'main-container')}>
         <Route exact path="/dashboard" component={MerchantsList} />
         <Route
           exact

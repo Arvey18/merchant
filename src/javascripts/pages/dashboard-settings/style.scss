@@ -81,3 +81,87 @@
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  #settings {
+    .edit-form {
+      .nav-left {
+        width: 250px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #settings {
+    .edit-form {
+      flex-flow: column;
+      margin-top: 30px;
+
+      .nav-left {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-flow: row;
+        position: relative;
+        overflow: hidden;
+        align-items: stretch;
+
+        &>div {
+          position: relative;
+          top: 10px;
+          flex: 1;
+          margin: 0px 0px 0px 10px;
+          padding-bottom: 20px;
+          border: 1px solid $blue;
+
+          &:first-child {
+            margin-left: 0px;
+          }
+        }
+
+        .fields-con {
+
+          .MuiTextField-root {
+            .MuiFormLabel-root {
+              font-size: 14px;
+            }
+
+            input {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .content-right {
+        padding: 60px 0px 0px 0px;
+
+        &>.content-right-con {
+          .fields-con {
+            padding: 20px;
+          }
+
+          h3 {
+            font-size: 30px;
+          }
+
+          .data-con {
+            text-align: center;
+            margin-top: 40px;
+
+            img {
+              border-radius: 100%;
+              max-width: 150px;
+            }
+
+            .user-name {
+              font-size: 18px;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
