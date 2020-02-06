@@ -108,13 +108,15 @@ const MerchantsList = (props: any): ReactElement => {
   };
 
   const handleSort = (e: any, sort: string) => {
-    const sorted = _.sortBy(dataRow, [sort]);
-    if (e.target.classList.contains('active')) {
-      e.target.classList.remove('active');
-      setDataRow(merchants);
-    } else {
-      e.target.classList.add('active');
-      setDataRow(sorted);
+    if (sort !== 'id') {
+      const sorted = _.sortBy(dataRow, sort);
+      if (e.target.classList.contains('active')) {
+        e.target.classList.remove('active');
+        setDataRow(merchants);
+      } else {
+        e.target.classList.add('active');
+        setDataRow(sorted);
+      }
     }
   };
 
@@ -160,7 +162,10 @@ const MerchantsList = (props: any): ReactElement => {
                         className="sort"
                         onClick={e => handleSort(e, column.id)}
                       >
-                        {column.name} <KeyboardArrowDownIcon />
+                        {column.name}{' '}
+                        {column.id === 'name' ? (
+                          <KeyboardArrowDownIcon />
+                        ) : null}
                       </div>
                     </TableCell>
                   ))}
